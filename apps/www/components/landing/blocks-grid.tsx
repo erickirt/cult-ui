@@ -11,7 +11,7 @@ export function MiniBlocksGrid() {
 				<div className="mx-auto mb-8 flex max-w-2xl items-center justify-center gap-4">
 					<div className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
 					<div className="flex items-center gap-2 border border-border bg-background px-4 py-2">
-						<Shapes className="size-3.5 md:size-4 fill-pink-400/50" />
+						<Shapes className="size-3.5 md:size-4 fill-[#ADFA1B]/50" />
 						<span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
 							CULT PRO
 						</span>

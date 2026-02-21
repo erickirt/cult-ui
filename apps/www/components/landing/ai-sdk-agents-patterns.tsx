@@ -1041,7 +1041,7 @@ export function WhatsIncluded() {
 						<div className="h-px flex-1 bg-gradient-to-r from-transparent to-border" />
 						<div className="flex items-center gap-2 border border-border bg-background px-4 py-2">
 							<HugeiconsIcon
-								className="size-3.5 md:size-4 fill-blue-400/60"
+								className="size-3.5 md:size-4 fill-[#ADFA1B]/60"
 								icon={ShapeCollectionIcon}
 							/>
 							<span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
@@ -1110,7 +1110,7 @@ export function WhatsIncluded() {
 						<div className="mx-auto mb-6 flex max-w-2xl items-center justify-center gap-4">
 							<div className="flex items-center gap-2 border border-primary/30  px-3 py-1.5">
 								<HugeiconsIcon
-									className="size-3.5 md:size-4 fill-cyan-400/40"
+									className="size-3.5 md:size-4 fill-[#ADFA1B]/40"
 									icon={Layers01Icon}
 								/>
 								<span className="font-mono text-[11px] text-primary uppercase tracking-wider">

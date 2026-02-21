@@ -1,34 +1,32 @@
-import { Shapes } from "lucide-react"
-
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { ArrowRight } from "lucide-react";
 
 export function AlertBanner() {
-  return (
-    <Alert
-      variant="default"
-      className="rounded-none border-x-0 border-t-0 bg-[#EC06FF] px-6"
-    >
-      <a
-        href="https://pro.cult-ui.com"
-        target="_blank"
-        rel="noreferrer"
-        className="font-medium "
-      >
-        <div className="mx-auto flex max-w-screen-lg items-center justify-center space-x-1 text-white">
-          <Shapes className="size-4 fill-black stroke-black" />
-          <AlertDescription className="ml-2 flex items-center gap-1">
-            <p>
-              Introducing <span className="font-black">cult ui pro</span>
-            </p>
-
-            <div className="size-1 rounded-full bg-black"></div>
-
-            <span className="hidden md:block">
-              full stack blocks, ai agents and more.
-            </span>
-          </AlertDescription>
-        </div>
-      </a>
-    </Alert>
-  )
+	return (
+		<div className="relative z-50 w-full bg-[#ADFA1B] text-black">
+			<a
+				href="https://aisdkagents.com"
+				target="_blank"
+				rel="noopener"
+				className="group flex items-center justify-center gap-3 px-4 py-1.5 transition-colors hover:bg-[#9de610]"
+			>
+				<div className="hidden h-px w-8 bg-gradient-to-r from-transparent to-black/10 sm:block" />
+				<div className="flex items-center gap-2">
+					<span className="border shadow-inner border-black/20 bg-black/5 px-1.5 py-0.5 font-pixel-square text-[10px] uppercase tracking-wider text-black">
+						New
+					</span>
+					<span className="font-pixel-square text-[11px] uppercase tracking-wider text-black/80">
+						AI SDK Agent Patterns
+					</span>
+					<span className="hidden font-pixel-square text-[11px] text-black/25 sm:inline">
+						/
+					</span>
+					<span className="hidden font-pixel-square text-[11px] tracking-wider text-black/50 sm:inline">
+						92+ production-ready patterns
+					</span>
+				</div>
+				<ArrowRight className="size-3 text-black/40 transition-transform group-hover:translate-x-0.5 group-hover:text-black" />
+				<div className="hidden h-px w-8 bg-gradient-to-l from-transparent to-black/10 sm:block" />
+			</a>
+		</div>
+	);
 }

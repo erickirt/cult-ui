@@ -20,7 +20,7 @@ export function TemplateGrid() {
 				<div className="mx-auto mb-8 flex max-w-xl items-center justify-center gap-4">
 					<div className="h-px flex-1 bg-border/60" />
 					<div className="flex items-center gap-2 border border-border/60 bg-background px-3 py-1.5">
-						<IceCream className="size-3.5 md:size-4 fill-sky-400/50" />
+						<IceCream className="size-3.5 md:size-4 fill-[#ADFA1B]/50" />
 						<span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
 							TEMPLATES
 						</span>
