@@ -15,13 +15,13 @@ export function AlertBanner() {
 						New
 					</span>
 					<span className="font-pixel-square text-[11px] uppercase tracking-wider text-black/80">
-						AI SDK Agent Patterns
+						AI SDK Agents
 					</span>
 					<span className="hidden font-pixel-square text-[11px] text-black/25 sm:inline">
 						/
 					</span>
 					<span className="hidden font-pixel-square text-[11px] tracking-wider text-black/50 sm:inline">
-						92+ production-ready patterns
+						100+ AI agent patterns - just copy & paste
 					</span>
 				</div>
 				<ArrowRight className="size-3 text-black/40 transition-transform group-hover:translate-x-0.5 group-hover:text-black" />

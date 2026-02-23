@@ -46,8 +46,8 @@ export function MainNav() {
 					)}
 				>
 					Blocks{" "}
-					<span className="text-[10px] font-pixel-square shadow-inner bg-[#ADFA1B] border px-1 border-black/20">
-						92 new
+					<span className="text-[10px] font-pixel-square shadow-inner text-black bg-[#ADFA1B] border px-1 border-black/20">
+						100 new
 					</span>
 					<ExternalLink className="size-3" />
 				</a>
@@ -106,7 +106,7 @@ export function MainNav() {
 					)}
 				>
 					Templates{" "}
-					<span className="text-[10px] font-pixel-square shadow-inner bg-[#ADFA1B] border px-1 border-black/20">
+					<span className="text-[10px] font-pixel-square text-black shadow-inner bg-[#ADFA1B] border px-1 border-black/20">
 						4 new
 					</span>
 					<ExternalLink className="size-3" />

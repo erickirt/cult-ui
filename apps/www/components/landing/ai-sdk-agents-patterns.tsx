@@ -299,7 +299,7 @@ function getBlockImageUrl(
 // Hardcoded featured block data
 // ---------------------------------------------------------------------------
 
-const TOTAL_PATTERN_COUNT = 92;
+const TOTAL_PATTERN_COUNT = 100;
 
 type FeaturedBlock = {
 	name: string;
