@@ -181,6 +181,31 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "cutout-card": {
+    name: "cutout-card",
+    description:
+      "Image card with cutout corners, hover motion, inset labels, pins, and reveal actions",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/default/ui/cutout-card.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/cutout-card.tsx")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "dynamic-island": {
     name: "dynamic-island",
     description:
@@ -246,6 +271,31 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/ui/bg-animate-button.tsx")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "border-beam-button": {
+    name: "border-beam-button",
+    description:
+      "Shadcn Button wrapped in Border Beam: animated border glow with compact icon and text variants",
+    type: "registry:ui",
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "registry/default/ui/border-beam-button.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/border-beam-button.tsx")
       const exportName =
         Object.keys(mod).find(
           (key) =>
@@ -1233,6 +1283,31 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "grid-beam": {
+    name: "grid-beam",
+    description:
+      "Canvas grid beam animation with palette presets, SVG dividers, and composable headless pieces via useGridBeam",
+    type: "registry:ui",
+    registryDependencies: undefined,
+    files: [
+      {
+        path: "registry/default/ui/grid-beam.tsx",
+        type: "registry:ui",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/ui/grid-beam.tsx")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "youtube-video-player": {
     name: "youtube-video-player",
     description:
@@ -1971,6 +2046,32 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  "cutout-card-demo": {
+    name: "cutout-card-demo",
+    description: "",
+    type: "registry:component",
+    registryDependencies: ["cutout-card"],
+    files: [
+      {
+        path: "registry/default/example/cutout-card-demo.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/default/example/cutout-card-demo.tsx"
+      )
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   "dynamic-island-demo": {
     name: "dynamic-island-demo",
     description: "",
@@ -2038,6 +2139,32 @@ export const Index: Record<string, any> = {
     component: React.lazy(async () => {
       const mod = await import(
         "@/registry/default/example/bg-animate-button-demo.tsx"
+      )
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "border-beam-button-demo": {
+    name: "border-beam-button-demo",
+    description: "",
+    type: "registry:component",
+    registryDependencies: ["border-beam-button"],
+    files: [
+      {
+        path: "registry/default/example/border-beam-button-demo.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import(
+        "@/registry/default/example/border-beam-button-demo.tsx"
       )
       const exportName =
         Object.keys(mod).find(
@@ -3027,6 +3154,30 @@ export const Index: Record<string, any> = {
     ],
     component: React.lazy(async () => {
       const mod = await import("@/registry/default/example/svg-bands-demo.tsx")
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === "function" || typeof mod[key] === "object"
+        ) || item.name
+      return { default: mod.default || mod[exportName] }
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  "grid-beam-demo": {
+    name: "grid-beam-demo",
+    description: "",
+    type: "registry:component",
+    registryDependencies: ["grid-beam"],
+    files: [
+      {
+        path: "registry/default/example/grid-beam-demo.tsx",
+        type: "registry:component",
+        target: "",
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import("@/registry/default/example/grid-beam-demo.tsx")
       const exportName =
         Object.keys(mod).find(
           (key) =>

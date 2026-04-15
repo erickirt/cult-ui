@@ -52,31 +52,31 @@ export const docsConfig: DocsConfig = {
 							title: "Hero Dithering",
 							href: "/docs/components/hero-dithering",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 						{
 							title: "Hero Color Panels",
 							href: "/docs/components/hero-color-panels",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 						{
 							title: "Hero Heatmap",
 							href: "/docs/components/hero-heatmap",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 						{
 							title: "Hero Liquid Metal",
 							href: "/docs/components/hero-liquid-metal",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 						{
 							title: "Hero Static Radial Gradient",
 							href: "/docs/components/hero-static-radial-gradient",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 						{
 							title: "Bg Media Hero",
@@ -107,7 +107,7 @@ export const docsConfig: DocsConfig = {
 							title: "Onboarding",
 							href: "/docs/components/onboarding",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 						{
 							title: "Feature Carousel",
@@ -152,16 +152,22 @@ export const docsConfig: DocsConfig = {
 							items: [],
 						},
 						{
+							title: "Border Beam Button",
+							href: "/docs/components/border-beam-button",
+							items: [],
+							label: "new",
+						},
+						{
 							title: "Cosmic Button",
 							href: "/docs/components/cosmic-button",
-							label: "new",
+							label: "recent",
 							items: [],
 						},
 						{
 							title: "Gradient Button Group",
 							href: "/docs/components/gradient-button-group",
 							items: [],
-							label: "new",
+							label: "recent",
 						},
 					],
 				},
@@ -181,6 +187,12 @@ export const docsConfig: DocsConfig = {
 						{
 							title: "Minimal Card",
 							href: "/docs/components/minimal-card",
+							items: [],
+						},
+						{
+							title: "Cutout Card",
+							href: "/docs/components/cutout-card",
+							label: "new",
 							items: [],
 						},
 						{
@@ -335,7 +347,6 @@ export const docsConfig: DocsConfig = {
 							title: "Terminal Animation",
 							href: "/docs/components/terminal-animation",
 							items: [],
-							label: "new",
 						},
 						{
 							title: "Squiggle Arrow",
@@ -371,25 +382,21 @@ export const docsConfig: DocsConfig = {
 							title: "Pixel Heading (Char)",
 							href: "/docs/components/pixel-heading-character",
 							items: [],
-							label: "recent",
 						},
 						{
 							title: "Pixel Heading (Word)",
 							href: "/docs/components/pixel-heading-word",
 							items: [],
-							label: "recent",
 						},
 						{
 							title: "Pixel Paragraph",
 							href: "/docs/components/pixel-paragraph-words",
 							items: [],
-							label: "recent",
 						},
 						{
 							title: "Pixel Paragraph Inv",
 							href: "/docs/components/pixel-paragraph-words-inverse",
 							items: [],
-							label: "recent",
 						},
 						{
 							title: "Text Gif",
@@ -417,6 +424,18 @@ export const docsConfig: DocsConfig = {
 					title: "Visual Effects",
 					items: [
 						{
+							title: "Grid Beam",
+							href: "/docs/components/grid-beam",
+							items: [],
+							label: "new",
+						},
+						{
+							title: "Edge Blur",
+							href: "/docs/components/edge-blur",
+							items: [],
+							label: "new",
+						},
+						{
 							title: "LightBoard",
 							href: "/docs/components/lightboard",
 							items: [],
@@ -437,12 +456,7 @@ export const docsConfig: DocsConfig = {
 							label: "updated",
 							items: [],
 						},
-						{
-							title: "Edge Blur",
-							href: "/docs/components/edge-blur",
-							items: [],
-							label: "new",
-						},
+
 						{
 							title: "SVG Shapes",
 							href: "/docs/components/svg-shapes",
@@ -461,6 +475,7 @@ export const docsConfig: DocsConfig = {
 							items: [],
 							label: "new",
 						},
+
 						{
 							title: "Stripe Bg Guides",
 							href: "/docs/components/stripe-bg-guides",

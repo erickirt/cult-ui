@@ -1,16 +1,16 @@
-import type { ReactNode } from "react";
-
-import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowRight02Icon } from "@hugeicons/core-free-icons";
 
+import { HugeiconsIcon } from "@hugeicons/react";
+import type { ReactNode } from "react";
+import { Icons } from "@/components/icons";
+import { WhatsIncluded } from "@/components/landing/ai-sdk-agents-patterns";
+import { BackgroundImageTexture } from "@/components/landing/bg-image-texture";
 import { CultProComponentsGrid } from "@/components/landing/cult-pro-components-grid";
 import { CultProSectionsGrid } from "@/components/landing/cult-pro-sections-grid";
 import { LatestComponentVertical } from "@/components/landing/featured-component";
 import { PlugCardGrid } from "@/components/landing/plug-grid";
+import { ProductCatalogRegionHeader } from "@/components/landing/product-catalog-region-header";
 import { TemplateGrid } from "@/components/landing/template-grid";
-import { WhatsIncluded } from "@/components/landing/ai-sdk-agents-patterns";
-import { BackgroundImageTexture } from "@/components/landing/bg-image-texture";
-import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
 const SURFACE_SHADOW =
@@ -69,18 +69,19 @@ function ProductCatalogRegion({
 			aria-labelledby={titleId}
 			className={cn(
 				"w-full border-t",
-				isAi ? "border-[#006BFF]/80" : "border-[#FF6BFF]/75 ",
+				// isAi ? "border-[#006BFF]/80" : "border-[#FF6BFF]/75 ",
 			)}
 		>
-			<header
-				className={cn(
-					"border-b",
-					isAi
-						? "border-[#006BFF]/80 bg-[radial-gradient(120%_100%_at_50%_45%,rgba(0,107,255,0.75)_0%,rgba(0,107,255,0.45)_32%,rgba(0,107,255,0.15)_60%,rgba(255,255,255,0.96)_100%)] dark:bg-[radial-gradient(120%_100%_at_50%_45%,rgba(0,107,255,0.95)_0%,rgba(0,107,255,0.58)_32%,rgba(0,107,255,0.22)_60%,rgba(5,12,28,0.98)_100%)]"
-						: "border-[#FF6BFF]/75 bg-[radial-gradient(120%_100%_at_50%_45%,rgba(255,107,255,0.72)_0%,rgba(255,107,255,0.4)_32%,rgba(255,107,255,0.14)_60%,rgba(255,255,255,0.96)_100%)] dark:bg-[radial-gradient(120%_100%_at_50%_45%,rgba(255,107,255,0.9)_0%,rgba(255,107,255,0.52)_32%,rgba(255,107,255,0.22)_60%,rgba(24,9,26,0.98)_100%)]",
+			<ProductCatalogRegionHeader
+				headerClassName={cn(
+					isAi ? "bg-white/80 border-b" : "bg-white/80 border-b",
+					// isAi
+					// 	? "bg-[radial-gradient(120%_100%_at_50%_45%,rgba(0,107,255,0.75)_0%,rgba(0,107,255,0.45)_32%,rgba(0,107,255,0.15)_60%,rgba(255,255,255,0.96)_100%)] dark:bg-[radial-gradient(120%_100%_at_50%_45%,rgba(0,107,255,0.95)_0%,rgba(0,107,255,0.58)_32%,rgba(0,107,255,0.22)_60%,rgba(5,12,28,0.98)_100%)]"
+					// 	: "bg-[radial-gradient(120%_100%_at_50%_45%,rgba(255,107,255,0.72)_0%,rgba(255,107,255,0.4)_32%,rgba(255,107,255,0.14)_60%,rgba(255,255,255,0.96)_100%)] dark:bg-[radial-gradient(120%_100%_at_50%_45%,rgba(255,107,255,0.9)_0%,rgba(255,107,255,0.52)_32%,rgba(255,107,255,0.22)_60%,rgba(24,9,26,0.98)_100%)]",
 					SURFACE_SHADOW,
 					SURFACE_SHADOW_DARK,
 				)}
+				isAi={isAi}
 			>
 				<div className="mx-auto max-w-6xl px-4 py-5 md:px-6">
 					<div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between md:gap-8">
@@ -109,18 +110,18 @@ function ProductCatalogRegion({
 							<div className="min-w-0 space-y-1">
 								<p
 									className={cn(
-										"font-mono text-[10px] uppercase tracking-[0.2em]",
+										"font-mono text-[10px] uppercase tracking-[0.2em] antialiased",
 										isAi
-											? "text-white dark:text-[#d9e8ff]"
+											? "text-foreground "
 											: "text-[#7a257a] dark:text-[#ffd9ff]",
 									)}
 								>
-									{isAi ? "FULL STACK AI PATTERNS" : "PREMIUM MARKETING BLOCKS"}
+									{isAi ? "FULL STACK AI BLOCKS" : "PREMIUM MARKETING BLOCKS"}
 								</p>
 								<h2
 									className={cn(
-										"text-balance text-base font-medium tracking-tight md:text-lg",
-										isAi && "font-pixel-square text-white",
+										"text-balance text-base font-medium tracking-tight antialiased md:text-lg",
+										isAi && "font-pixel-square text-foreground",
 										!isAi && "font-mono text-[#FF6BFF]",
 									)}
 									id={titleId}
@@ -161,7 +162,7 @@ function ProductCatalogRegion({
 							</div>
 						</div>
 
-						<div className="flex flex-row items-center gap-3 md:flex-col md:items-end md:pt-1">
+						<div className="hidden md:flex flex-row items-center gap-3 md:flex-col md:items-end md:pt-1">
 							<CatalogOutboundChip
 								href={
 									isAi ? "https://aisdkagents.com" : "https://pro.cult-ui.com"
@@ -182,7 +183,7 @@ function ProductCatalogRegion({
 						</div>
 					</div>
 				</div>
-			</header>
+			</ProductCatalogRegionHeader>
 
 			{children}
 		</section>
@@ -238,13 +239,13 @@ function ProductPromoCard({
 
 	return (
 		<BackgroundImageTexture
-			className="h-full overflow-hidden rounded-xl shadow-elevation-light max-w-sm"
+			className="h-full overflow-hidden rounded-xl shadow-elevation-light w-full sm:max-w-sm"
 			opacity={isAi ? 0.99 : 0.29}
 			variant={isAi ? "debut-light" : "inflicted"}
 		>
 			<article
 				className={cn(
-					"group relative flex h-full flex-col rounded-xl max-w-sm  p-6  transition-all duration-200 md:p-8",
+					"group relative flex h-full flex-col rounded-xl w-full sm:max-w-sm  p-6  transition-all duration-200 md:p-8",
 					isAi
 						? "border-[#006BFF]/30 bg-background/10"
 						: "border-[#FF6BFF]/35 bg-background/10",
@@ -295,6 +296,28 @@ export function HomeBelowHeroLayoutAlternate() {
 			<div className="mx-auto w-full max-w-4xl px-4 pt-4 md:pt-2 pb-8">
 				<LatestComponentVertical />
 			</div>
+
+			<BackgroundImageTexture
+				className="overflow-hidden "
+				opacity={0.99}
+				variant="debut-light"
+			>
+				<ProductCatalogRegion product="aisdkagents">
+					<WhatsIncluded />
+				</ProductCatalogRegion>
+			</BackgroundImageTexture>
+
+			<BackgroundImageTexture
+				className="overflow-hidden "
+				opacity={0.11}
+				variant="inflicted"
+			>
+				<ProductCatalogRegion product="cult-pro">
+					<CultProComponentsGrid />
+					<CultProSectionsGrid />
+					<TemplateGrid />
+				</ProductCatalogRegion>
+			</BackgroundImageTexture>
 
 			<BackgroundImageTexture
 				className="overflow-hidden "
@@ -385,30 +408,8 @@ export function HomeBelowHeroLayoutAlternate() {
 				</div>
 			</BackgroundImageTexture>
 
-			<BackgroundImageTexture
-				className="overflow-hidden "
-				opacity={0.99}
-				variant="debut-light"
-			>
-				<ProductCatalogRegion product="aisdkagents">
-					<WhatsIncluded />
-				</ProductCatalogRegion>
-			</BackgroundImageTexture>
-
-			<BackgroundImageTexture
-				className="overflow-hidden "
-				opacity={0.11}
-				variant="inflicted"
-			>
-				<ProductCatalogRegion product="cult-pro">
-					<CultProSectionsGrid />
-					<CultProComponentsGrid />
-					<TemplateGrid />
-				</ProductCatalogRegion>
-			</BackgroundImageTexture>
-
 			<div className="bg-muted/40 border-t border-border/50 border-b">
-				<div className="mx-auto px-2  max-w-4xl ">
+				<div className="mx-auto px-12 sm:px-2  max-w-4xl ">
 					<PlugCardGrid />
 				</div>
 			</div>

@@ -73,6 +73,7 @@
 		"@xyflow/react": "^12.10.0",
 		"ai": "^6.0.79",
 		"ansi-to-react": "^6.2.6",
+		"border-beam": "^1.0.1",
 		"chroma-js": "^3.0.0",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",

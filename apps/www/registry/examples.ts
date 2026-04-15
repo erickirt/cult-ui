@@ -79,6 +79,17 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "cutout-card-demo",
+    type: "registry:component",
+    registryDependencies: ["cutout-card"],
+    files: [
+      {
+        path: "registry/default/example/cutout-card-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "dynamic-island-demo",
     type: "registry:component",
     registryDependencies: ["dynamic-island"],
@@ -107,6 +118,17 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "registry/default/example/bg-animate-button-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "border-beam-button-demo",
+    type: "registry:component",
+    registryDependencies: ["border-beam-button"],
+    files: [
+      {
+        path: "registry/default/example/border-beam-button-demo.tsx",
         type: "registry:component",
       },
     ],
@@ -536,6 +558,17 @@ export const examples: Registry["items"] = [
     files: [
       {
         path: "registry/default/example/svg-bands-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "grid-beam-demo",
+    type: "registry:component",
+    registryDependencies: ["grid-beam"],
+    files: [
+      {
+        path: "registry/default/example/grid-beam-demo.tsx",
         type: "registry:component",
       },
     ],

@@ -93,6 +93,19 @@ export const ui: Registry["items"] = [
       "Clean and minimal card component with subtle styling and hover effects",
   },
   {
+    name: "cutout-card",
+    type: "registry:ui",
+    dependencies: ["motion", "@radix-ui/react-use-controllable-state"],
+    files: [
+      {
+        path: "registry/default/ui/cutout-card.tsx",
+        type: "registry:ui",
+      },
+    ],
+    description:
+      "Image card with cutout corners, hover motion, inset labels, pins, and reveal actions",
+  },
+  {
     name: "dynamic-island",
     type: "registry:ui",
     dependencies: ["motion"],
@@ -130,6 +143,20 @@ export const ui: Registry["items"] = [
     ],
     description:
       "Button component with animated background effects and gradient transitions",
+  },
+  {
+    name: "border-beam-button",
+    type: "registry:ui",
+    dependencies: ["border-beam"],
+    registryDependencies: ["button"],
+    files: [
+      {
+        path: "registry/default/ui/border-beam-button.tsx",
+        type: "registry:ui",
+      },
+    ],
+    description:
+      "Shadcn Button wrapped in Border Beam: animated border glow with compact icon and text variants",
   },
   {
     name: "family-button",
@@ -640,6 +667,18 @@ export const ui: Registry["items"] = [
     ],
     description:
       "Wide SVG section bands, battlement and zigzag trims, steep hero edges, and ornamental frames",
+  },
+  {
+    name: "grid-beam",
+    type: "registry:ui",
+    files: [
+      {
+        path: "registry/default/ui/grid-beam.tsx",
+        type: "registry:ui",
+      },
+    ],
+    description:
+      "Canvas grid beam animation with palette presets, SVG dividers, and composable headless pieces via useGridBeam",
   },
   {
     name: "youtube-video-player",

@@ -19,8 +19,7 @@ import {
   Video,
   Wind,
 } from "lucide-react"
-import { AnimatePresence, motion } from "motion/react"
-import { toast } from "sonner"
+import { AnimatePresence, motion, useReducedMotion } from "motion/react"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"

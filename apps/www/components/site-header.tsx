@@ -41,7 +41,7 @@ export function SiteHeader({ githubLink }: SiteHeaderProps) {
 							rel="noreferrer"
 							className={cn(
 								buttonVariants({ size: "sm" }),
-								"inline-flex shrink-0 font-semibold",
+								"inline-flex shrink-0 font-semibold hidden md:inline-flex",
 							)}
 						>
 							Get Cult Pro

@@ -19,7 +19,7 @@ import { Icons } from "../icons";
 
 type LandingSection = (typeof cultProSectionsLanding)[number];
 
-const PRO_SECTIONS_BASE = "https://pro.cult-ui.com/sections";
+const PRO_SECTIONS_BASE = "https://pro.cult-ui.com/docs/blocks";
 
 function formatCategory(category: string): string {
 	const last = category.split("-").pop() || category;
