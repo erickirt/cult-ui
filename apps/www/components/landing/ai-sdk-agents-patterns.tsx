@@ -321,7 +321,7 @@ const FEATURED_BLOCKS: FeaturedBlock[] = [
 		title: "Competitor Research Agent",
 		description:
 			"Enter a competitor URL to get comprehensive competitive intelligence. Uses Firecrawl Map + Parallel Scrape for fast extraction (~3-5s). Analyzes positioning, pricing, features, tech stack, and generates sales battle cards.",
-		href: "/directory/examples/research-agents/example-agent-competitor",
+		href: "/patterns/example-agent-competitor",
 		tags: [
 			"ai",
 			"agents",
@@ -369,7 +369,7 @@ const FEATURED_BLOCKS: FeaturedBlock[] = [
 		title: "Data Analysis Agent",
 		description:
 			"Upload CSV or JSON data and get AI-powered analysis with interactive visualizations. Detect patterns, correlations, outliers, and generate insights with confidence scores. Export comprehensive reports.",
-		href: "/directory/examples/analytics-agents/example-agent-data-analysis",
+		href: "/patterns/example-agent-data-analysis",
 		tags: [
 			"ai",
 			"agents",
@@ -416,7 +416,7 @@ const FEATURED_BLOCKS: FeaturedBlock[] = [
 		title: "Accessibility Audit Agent",
 		description:
 			"Audit any website for WCAG 2.1 accessibility compliance using Firecrawl, then use AI tools to analyze issues by severity, check color contrast, validate heading structure, generate alt text, and create prioritized remediation plans with visual tool outputs.",
-		href: "/directory/examples/audit-agents/example-agent-a11y-audit",
+		href: "/patterns/example-agent-a11y-audit",
 		tags: [
 			"ai",
 			"agents",
@@ -465,7 +465,7 @@ const FEATURED_BLOCKS: FeaturedBlock[] = [
 		title: "Table Editor Artifact",
 		description:
 			"Spreadsheet editor with AI chat for data analysis and manipulation. Edit tables through conversation.",
-		href: "/directory/artifacts/interactive-artifacts/ai-artifact-table",
+		href: "/patterns/ai-artifact-table",
 		tags: [
 			"ai",
 			"table",
@@ -506,7 +506,7 @@ const FEATURED_BLOCKS: FeaturedBlock[] = [
 		title: "Branding Agent",
 		description:
 			"Extract brand design systems from any website using Firecrawl, then use AI tools to export tokens, generate color palettes, check accessibility, and analyze brand personality.",
-		href: "/directory/examples/design-agents/example-agent-branding",
+		href: "/patterns/example-agent-branding",
 		tags: [
 			"ai",
 			"agents",
@@ -551,7 +551,7 @@ const FEATURED_BLOCKS: FeaturedBlock[] = [
 		title: "Chart Generation Artifact",
 		description:
 			"Generate burn rate charts and financial analysis through AI chat. Creates interactive visualizations from conversation.",
-		href: "/directory/artifacts/static-artifacts/ai-artifact-chart",
+		href: "/patterns/ai-artifact-chart",
 		tags: [
 			"ai",
 			"artifacts",
