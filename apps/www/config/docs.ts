@@ -373,6 +373,12 @@ export const docsConfig: DocsConfig = {
 							href: "/docs/components/youtube-video-player",
 							items: [],
 						},
+						{
+							title: "Dither Image",
+							href: "/docs/components/dither-image",
+							items: [],
+							label: "new",
+						},
 					],
 				},
 				{

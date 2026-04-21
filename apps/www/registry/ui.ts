@@ -418,6 +418,19 @@ export const ui: Registry["items"] = [
       "Stacked backdrop-blur layers with a gradient mask for soft top or bottom screen edges",
   },
   {
+    name: "dither-image",
+    type: "registry:ui",
+    dependencies: ["dither-plugin"],
+    files: [
+      {
+        path: "registry/default/ui/dither-image.tsx",
+        type: "registry:ui",
+      },
+    ],
+    description:
+      "Compound Next.js image figure with CSS Bayer dither via dither-plugin, partial reveal overlays, and typed tuning props",
+  },
+  {
     name: "popover-form",
     type: "registry:ui",
     dependencies: ["motion"],

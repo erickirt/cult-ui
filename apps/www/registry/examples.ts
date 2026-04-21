@@ -354,6 +354,28 @@ export const examples: Registry["items"] = [
     ],
   },
   {
+    name: "dither-image-demo",
+    type: "registry:component",
+    registryDependencies: ["dither-image"],
+    files: [
+      {
+        path: "registry/default/example/dither-image-demo.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
+    name: "dither-image-demo-upload",
+    type: "registry:component",
+    registryDependencies: ["dither-image"],
+    files: [
+      {
+        path: "registry/default/example/dither-image-demo-upload.tsx",
+        type: "registry:component",
+      },
+    ],
+  },
+  {
     name: "popover-form-demo",
     type: "registry:component",
     registryDependencies: ["popover-form"],
