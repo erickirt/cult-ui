@@ -4,6 +4,7 @@ import { mdxComponents } from "@/mdx-components";
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { findNeighbour } from "fumadocs-core/server";
 
+import { siteConfig } from "@/config/site";
 import { source } from "@/lib/source";
 import { absoluteUrl } from "@/lib/utils";
 
@@ -49,9 +50,10 @@ export async function generateMetadata(props: {
 			url: absoluteUrl(page.url),
 			images: [
 				{
-					url: `/og?title=${encodeURIComponent(
-						doc.title,
-					)}&description=${encodeURIComponent(doc.description)}`,
+					url: siteConfig.ogImage,
+					width: 1200,
+					height: 630,
+					alt: doc.title,
 				},
 			],
 		},
@@ -59,14 +61,8 @@ export async function generateMetadata(props: {
 			card: "summary_large_image",
 			title: doc.title,
 			description: doc.description,
-			images: [
-				{
-					url: `/og?title=${encodeURIComponent(
-						doc.title,
-					)}&description=${encodeURIComponent(doc.description)}`,
-				},
-			],
-			creator: "@shadcn",
+			images: [siteConfig.ogImage],
+			creator: "@nolansym",
 		},
 	};
 }

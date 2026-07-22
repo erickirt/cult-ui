@@ -18,6 +18,9 @@ const nextConfig = {
     "*": ["./public/**/*"],
   },
   images: {
+    // Keep optimized variants cached for 31 days to avoid re-running
+    // image optimization (and re-fetching large sources) per deploy/miss.
+    minimumCacheTTL: 2678400,
     remotePatterns: [
       {
         protocol: "https",
@@ -96,9 +99,17 @@ const nextConfig = {
         destination: "/view/:name",
         permanent: true,
       },
+      // Crawlers request markdown variants of docs pages; there is no
+      // /llm route, so send them to the canonical HTML page instead of
+      // letting every request 404 through a serverless function.
       {
         source: "/docs/:path*.mdx",
-        destination: "/docs/:path*.md",
+        destination: "/docs/:path*",
+        permanent: true,
+      },
+      {
+        source: "/docs/:path*.md",
+        destination: "/docs/:path*",
         permanent: true,
       },
       {
@@ -108,11 +119,37 @@ const nextConfig = {
       },
     ]
   },
-  rewrites() {
+  headers() {
     return [
       {
-        source: "/docs/:path*.md",
-        destination: "/llm/:path*",
+        // Registry JSON is content-stable per deploy; let browsers and
+        // the CDN keep it for a year.
+        source: "/r/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/registry/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Large static marketing/screenshot assets.
+        source: "/:dir(cult-pro-images|cult-pro-component-images|component-images|placeholders|migrate|images|textures|fonts)/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
       },
     ]
   },

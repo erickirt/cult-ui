@@ -5,6 +5,11 @@ import { registryItemSchema as shadcnRegistryItemSchema } from "shadcn/schema"
 
 // import { registryItemSchema } from "@/lib/schema"
 
+// Prerender every registry item at build time and 404 statically for
+// unknown names so bot probes never invoke a serverless function.
+export const dynamic = "force-static"
+export const dynamicParams = false
+
 // Use the registry.json file to generate static paths.
 export const generateStaticParams = async () => {
   const registryData = await import("@/registry.json")
